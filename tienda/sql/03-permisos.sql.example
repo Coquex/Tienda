@@ -1,0 +1,6 @@
+-- COPIAR a config/local/03-permisos.sql y sustituir SOLO en esa copia.
+CREATE USER IF NOT EXISTS 'tienda_app'@'127.0.0.1' IDENTIFIED BY 'REEMPLAZAR_CON_CLAVE_LOCAL';
+-- Si la cuenta ya existe, IF NOT EXISTS no modifica su contraseña.
+GRANT SELECT ON tienda.usuarios TO 'tienda_app'@'127.0.0.1';
+GRANT SELECT, INSERT, DELETE ON tienda.productos TO 'tienda_app'@'127.0.0.1';
+-- No se necesita FLUSH PRIVILEGES al utilizar CREATE USER y GRANT.

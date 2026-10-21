@@ -1,0 +1,8 @@
+body { background: #f4f7fb; color: #17263c; }
+.navbar { min-height: 76px; }
+.eyebrow { color: #436283; font-weight: 700; font-size: .75rem; letter-spacing: .12em; margin-bottom: .5rem; }
+.card { border-color: #dce5ef; border-radius: .8rem; }
+.btn-primary { background: #215bc0; border-color: #215bc0; }
+.table > :not(caption) > * > * { padding: 1rem; }
+summary { cursor: pointer; }
+input:focus, button:focus, a:focus, summary:focus { outline-offset: 3px; }

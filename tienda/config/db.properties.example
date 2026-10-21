@@ -1,0 +1,6 @@
+# Completar una copia y guardarla en la carpeta personal .tienda/db.properties.
+# Ejemplo: C:/Users/TU_USUARIO/.tienda/db.properties
+# Este archivo de ejemplo no contiene una contraseña real.
+db.url=jdbc:mysql://127.0.0.1:3306/tienda?sslMode=PREFERRED&connectionTimeZone=UTC&connectTimeout=5000&socketTimeout=10000
+db.user=tienda_app
+db.password=COMPLETAR_LOCALMENTE

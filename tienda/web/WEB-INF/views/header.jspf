@@ -1,0 +1,26 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ page import="my.webapp.login.Usuario" %>
+<%@ page import="my.webapp.seguridad.Seguridad" %>
+<% Usuario usuarioSesion = (Usuario) session.getAttribute("usuario"); %>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda universitaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="${pageContext.request.contextPath}/assets/app.css" rel="stylesheet">
+</head>
+<body>
+<header class="navbar navbar-dark bg-dark mb-4"><div class="container gap-3">
+  <a class="navbar-brand fw-semibold" href="${pageContext.request.contextPath}/ProductoServlet">Tienda universitaria</a>
+  <% if (usuarioSesion != null) { %>
+    <div class="d-flex align-items-center gap-3 text-white">
+      <span><%= Seguridad.texto(usuarioSesion.getNombre()) %></span>
+      <form action="${pageContext.request.contextPath}/LogoutServlet" method="post">
+        <input type="hidden" name="csrf" value="<%= Seguridad.texto(session.getAttribute("csrf")) %>">
+        <button class="btn btn-outline-light btn-sm">Cerrar sesión</button>
+      </form>
+    </div>
+  <% } %>
+</div></header>
+<main class="container pb-5">

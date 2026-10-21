@@ -1,0 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
+</main>
+<footer class="container border-top py-3 text-secondary small">Laboratorio de desarrollo web · JSP, Servlets, JDBC y MySQL</footer>
+</body></html>
